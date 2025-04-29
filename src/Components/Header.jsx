@@ -70,9 +70,12 @@ const Header = () => {
                   City Info
                 </Link>
                 <Link
-                  to="/food"
+                  to="/tourist-places"
                   className="block px-4 py-2 hover:bg-[#de5c0a]"
                 >
+                  Tourist Places
+                </Link>
+                <Link to="/foodpage" className="block px-4 py-2 hover:bg-[#de5c0a]">
                   Food & Restaurants
                 </Link>
                 <Link

@@ -16,6 +16,14 @@ import JodhpurRiShaan from './Components/JodhpurRiShaan';
 import Why from './Components/Why';
 import HexagonGrid from './Components/Hexagongrid';
 import SignUp from './Components/SignUp';
+import TouristPlaces from './Components/TouristPlaces'; 
+import MehrangarhFort from './Components/Services/MehrangarhFort';
+import ItineraryPage from './Components/Services/ItineraryPage';
+import FoodPage from './Components/Services/FoodPage.jsx';
+import Transport from './Components/Services/Transport.jsx';
+import CityInfo from './Components/Services/CityInfo.jsx';
+
+
 
 function App() {
   return (
@@ -29,7 +37,9 @@ function MainContent() {
   const location = useLocation(); // Get the current route path
 
   // Check if the current path is the home route or about page
-  const isHomeOrAbout = location.pathname === '/' || location.pathname === '/about';
+  const showHeaderFooterRoutes = ['/', '/about','/contact', '/login', '/review', '/signup', '/tourist-places', '/foodpage', '/itinerary', '/why', '/honeycomb', '/transport'];
+const isHomeOrAbout = showHeaderFooterRoutes.includes(location.pathname);
+
 
   return (
     <div className="bg-[#edeecb] min-h-screen overflow-x-hidden">
@@ -71,6 +81,13 @@ function MainContent() {
         <Route path="/why" element={<Why/>} />
         <Route path="/honeycomb" element={<HexagonGrid/>} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/tourist-places" element={<TouristPlaces />} />
+        <Route path="/place/mehrangarh-fort" element={<MehrangarhFort />} />
+        <Route path="/itinerary" element={<ItineraryPage />} />
+        <Route path="/foodpage" element={<FoodPage/>} />
+        <Route path="/transport" element={<Transport/>} />
+        <Route path="/city-info" element={<CityInfo/>} />
+
 
       </Routes>
 
