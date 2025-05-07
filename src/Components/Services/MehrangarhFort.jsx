@@ -47,8 +47,6 @@ const MehrangarhFort = () => {
                   alt="Mehrangarh Fort"
                   className="w-1/5 h-20 object-cover rounded-md"
                 />
-                
-                
               ))}
           </div>
 
@@ -98,11 +96,11 @@ const MehrangarhFort = () => {
         {/* Right Column with Soft Fade Background & Aligned Boxes */}
         <div className="relative flex flex-col justify-between z-10 h-full">
           {/* Soft faded background */}
-          <img
+          {/* <img
             src={fortImage}
             alt="Background"
             className="absolute top-20 right-0 w-50 h-50 object-cover opacity-50 z-0 rounded-xl"
-          />
+          /> */}
 
           <div className="space-y-4 relative z-10 h-full flex flex-col justify-between">
             {/* Box 1 - Top aligned */}

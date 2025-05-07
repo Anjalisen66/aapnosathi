@@ -47,8 +47,6 @@
 //                   alt="Mehrangarh Fort"
 //                   className="w-1/5 h-20 object-cover rounded-md"
 //                 />
-                
-                
 //               ))}
 //           </div>
 

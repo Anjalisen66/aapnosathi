@@ -58,29 +58,32 @@ const Header = () => {
             {isServicesOpen && (
               <div className="absolute left-0 mt-2 bg-[#edeecb] shadow-lg rounded-lg py-2 w-48 z-30">
                 <Link
-                  to="/service1"
-                  className="block px-4 py-2 hover:bg-[#de5c0a]"
+                  to="/accommodation"
+                  className="block px-4 py-2 hover:bg-[#693303]"
                 >
                   Accommodation
                 </Link>
                 <Link
                   to="/city-info"
-                  className="block px-4 py-2 hover:bg-[#de5c0a]"
+                  className="block px-4 py-2 hover:bg-[#693303]"
                 >
                   City Info
                 </Link>
                 <Link
                   to="/tourist-places"
-                  className="block px-4 py-2 hover:bg-[#de5c0a]"
+                  className="block px-4 py-2 hover:bg-[#693303]"
                 >
                   Tourist Places
                 </Link>
-                <Link to="/foodpage" className="block px-4 py-2 hover:bg-[#de5c0a]">
+                <Link
+                  to="/foodpage"
+                  className="block px-4 py-2 hover:bg-[#693303]"
+                >
                   Food & Restaurants
                 </Link>
                 <Link
                   to="/transport"
-                  className="block px-4 py-2 hover:bg-[#de5c0a]"
+                  className="block px-4 py-2 hover:bg-[#693303]"
                 >
                   Transport
                 </Link>
@@ -104,9 +107,9 @@ const Header = () => {
           onClick={toggleMenu}
           aria-label="Toggle Navigation"
         >
-          <div className="w-6 h-1 bg-[#de5c0a]"></div>
-          <div className="w-6 h-1 bg-[#de5c0a]"></div>
-          <div className="w-6 h-1 bg-[#de5c0a]"></div>
+          <div className="w-6 h-1 bg-[#693303]"></div>
+          <div className="w-6 h-1 bg-[#693303]"></div>
+          <div className="w-6 h-1 bg-[#693303]"></div>
         </button>
 
         {/* Menu for small screens */}
@@ -130,7 +133,7 @@ const Header = () => {
                     <li>
                       <Link
                         to="/service1"
-                        className="block hover:bg-[#de5c0a] p-2 rounded"
+                        className="block hover:bg-[#693303] p-2 rounded"
                       >
                         Accommodation
                       </Link>
@@ -138,7 +141,7 @@ const Header = () => {
                     <li>
                       <Link
                         to="/city-info"
-                        className="block hover:bg-[#de5c0a] p-2 rounded"
+                        className="block hover:bg-[#693303] p-2 rounded"
                       >
                         City Info
                       </Link>
@@ -146,7 +149,7 @@ const Header = () => {
                     <li>
                       <Link
                         to="/food"
-                        className="block hover:bg-[#de5c0a] p-2 rounded"
+                        className="block hover:bg-[#693303] p-2 rounded"
                       >
                         Food & Restaurants
                       </Link>
@@ -154,7 +157,7 @@ const Header = () => {
                     <li>
                       <Link
                         to="/transport"
-                        className="block hover:bg-[#de5c0a] p-2 rounded"
+                        className="block hover:bg-[#693303] p-2 rounded"
                       >
                         Transport
                       </Link>
@@ -187,8 +190,8 @@ const Header = () => {
 
       {/* Left and Right Border with Center Gap */}
       <div className="absolute top-[110px] w-full flex justify-between">
-        <div className="border-t-2 border-[#de5c0a] w-[50%]"></div>
-        <div className="border-t-2 border-[#de5c0a] w-[50%]"></div>
+        <div className="border-t-2 border-[#693303] w-[50%]"></div>
+        <div className="border-t-2 border-[#693303] w-[50%]"></div>
       </div>
     </header>
   );
