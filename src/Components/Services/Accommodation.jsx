@@ -157,7 +157,7 @@ const Accommodation = () => {
 
       {/* Header Image */}
       <img
-        src="/jodhpur.png"
+        src="/jodh.jpeg"
         alt="Banner"
         className="w-full h-64 object-cover border border-[#c89e6e]"
       />

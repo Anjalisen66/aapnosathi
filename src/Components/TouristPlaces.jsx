@@ -9,7 +9,6 @@ import umaidImg from "../assets/WhatsApp Image 2025-04-08 at 16.03.34_5ac2d816.j
 import mandoreImg from "../assets/umaid-bhawan.jpg";
 import { Link } from "react-router-dom";
 
-
 const ExploreJodhpur = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -38,11 +37,9 @@ const ExploreJodhpur = () => {
     {
       name: "Umaid Bhawan Palace",
       image: umaidImg,
-      path: "umaid-bhawan-palace",
+      path: "UmaidBhawan",
     },
   ];
-  
-  
 
   const handleInput = (e) => {
     const value = e.target.value;
@@ -76,7 +73,7 @@ const ExploreJodhpur = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div
+      {/* <div
         className="w-full h-[350px] bg-cover bg-center relative flex items-center justify-center text-white text-center"
         style={{ backgroundImage: `url(${desert})` }}
       >
@@ -86,7 +83,7 @@ const ExploreJodhpur = () => {
           <p className="text-xl mt-2">YOU’LL NEVER FORGET</p>
           <div className="mt-4 text-3xl animate-bounce">⬇️</div>
         </div>
-      </div>
+      </div> */}
 
       {/* Collage Image + Search */}
       <div className="relative">
@@ -168,7 +165,9 @@ const ExploreJodhpur = () => {
             </div>
 
             <div>
-              <label className="block font-medium mb-1">⏰ By Opening Hours</label>
+              <label className="block font-medium mb-1">
+                ⏰ By Opening Hours
+              </label>
               <select className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none">
                 <option>Morning</option>
                 <option>Afternoon</option>
@@ -230,10 +229,11 @@ const ExploreJodhpur = () => {
           ))}
         </div>
         <Link to="/itinerary">
-  <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600">
-    View Itinerary
-  </button>
-</Link>
+          <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600">
+            View Itinerary
+          </button>
+        </Link>
+        {/* <ItineraryPage /> */}
       </div>
     </div>
   );

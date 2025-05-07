@@ -17,8 +17,7 @@ const Footer = () => {
             className="text-md font-medium"
             style={{ fontFamily: "Garamond, serif", position: "relative" }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            Apno Ka Saath, Har Mod Par.
           </p>
           <div className="flex items-center gap-3 mt-4">
             {/* Instagram */}
@@ -44,40 +43,37 @@ const Footer = () => {
           <p className="text-lg text-[#7a3b1c] font-semibold">COMPANY</p>
           <ul className="mt-3 flex flex-col gap-2 text-md font-medium">
             <li>
-              <a href="#">About</a>
+              <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="#">Press</a>
+              <a href="/contact">FAQ</a>
             </li>
             <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Partners</a>
+              <a href="/login">Login</a>
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-lg text-[#7a3b1c] font-semibold ">SUPPORT</p>
+          <p className="text-lg text-[#7a3b1c] font-semibold ">SERVICES</p>
           <ul className="mt-3 flex flex-col gap-2 text-md font-medium">
             <li>
-              <a href="#">Help Center</a>
+              <a href="/accommodation"> Accommodation</a>
             </li>
             <li>
-              <a href="#">Safety Information</a>
+              <a href="/city-info">City Info</a>
             </li>
             <li>
-              <a href="#">Cancellation Options</a>
+              <a href="/tourist-places">Tourist Places</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/food">Food & Restaurants</a>
             </li>
             <li>
-              <a href="#">Accessibility</a>
+              <a href="/transport">Transport</a>
             </li>
           </ul>
         </div>
@@ -118,16 +114,13 @@ const Footer = () => {
       </div>
       <hr className="border-[#7a3b1c] mt-8" />
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5 font-medium">
-        <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} aapnosathi. All rights reserved.</p>
         <ul className="flex items-center gap-4 font-semibold">
           <li>
             <a href="#">Privacy</a>
           </li>
           <li>
             <a href="#">Terms</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
           </li>
         </ul>
       </div>
