@@ -17,7 +17,7 @@ const Footer = () => {
             className="text-md font-medium"
             style={{ fontFamily: "Garamond, serif", position: "relative" }}
           >
-            Apno Ka Saath, Har Mod Par.
+            नवीन शहर, सहज रहवास -छात्रां खातिर सब कुछ एक ठाँव
           </p>
           <div className="flex items-center gap-3 mt-4">
             {/* Instagram */}

@@ -23,6 +23,8 @@ import HexagonGrid from "./Components/Hexagongrid";
 import SignUp from "./Components/SignUp";
 import TouristPlaces from "./Components/TouristPlaces";
 import MehrangarhFort from "./Components/Services/MehrangarhFort";
+import UmaidBhawan from "./Components/Services/UmaidBhawan";
+import MandoreGarden from "./Components/Services/MandoreGarden";
 import ItineraryPage from "./Components/Services/ItineraryPage";
 import FoodPage from "./Components/Services/FoodPage.jsx";
 import Transport from "./Components/Services/Transport.jsx";
@@ -56,6 +58,8 @@ function MainContent() {
     "/transport",
     "/city-info",
     "/place/mehrangarh-fort",
+    "/place/UmaidBhawan",
+    "/place/mandore-gardens",
     "/accommodation",
   ];
   const isHomeOrAbout = showHeaderFooterRoutes.includes(location.pathname);
@@ -102,6 +106,8 @@ function MainContent() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/tourist-places" element={<TouristPlaces />} />
         <Route path="/place/mehrangarh-fort" element={<MehrangarhFort />} />
+        <Route path="/place/UmaidBhawan" element={<UmaidBhawan />} />
+        <Route path="/place/mandore-gardens" element={<MandoreGarden />} />
         <Route path="/itinerary" element={<ItineraryPage />} />
         <Route path="/foodpage" element={<FoodPage />} />
         <Route path="/transport" element={<Transport />} />

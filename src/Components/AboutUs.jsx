@@ -107,7 +107,7 @@ const AboutUs = () => {
           </div>
           <div className="team-info">
             <p className="team-name">Juhi Harsh</p>
-            <p className="team-designation">Machine Learning Expert</p>
+            <p className="team-designation">Backend Developer</p>
           </div>
         </div>
       </div>

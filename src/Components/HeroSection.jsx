@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/pexels-abhinav-tripathi-473877923-15774210.jpg"; // Ensure correct path
+import backgroundImage from "../assets/pexels-abhinav-tripathi-473877923-15774210.jpg"; 
 
 const HeroSection = () => {
   return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
           className="text-sm sm:text-lg lg:text-xl text-gray-700 p-4 "
           style={{ fontFamily: "Garamond, serif" }}
         >
-          Discover Jodhpur with Apno Sarthi — your ultimate guide to exploring
+          Discover Jodhpur with Aapno Sathi — your ultimate guide to exploring
           this vibrant city. From historical forts to local markets, we help
           students settle easily and enjoy everything Jodhpur has to offer.
         </p>

@@ -8,7 +8,7 @@ const JodhpurRiShaan = () => {
             <h2 className="text-[#de5c0a] text-3xl sm:text-4xl font-bold pb-5 pl-10 sm:mb-0 w-full sm:w-auto ">
                 Some Glimpse of Jodhpur Gallery
             </h2>
-            <div class="external bg-[#edeecb] mb-10 relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[500px]  items-start sm:items-center justify-start sm:gap-8 justify-center items-center bg-cover bg-center bg-no-repeat" >
+            <div class="external bg-[#edeecb] mb-10 relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[500px]  items-start sm:items-center justify-start sm:gap-8  bg-cover bg-center bg-no-repeat" >
                 <div class="horizontal-scroll-wrapper">
                     <div class="img-wrapper slower">
                         <a href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/" target="_blank" rel="noopener"><img src="https://lionsinthepiazza.com/wp-content/uploads/2024/01/india-blue-city-scaled.jpg" alt="" />

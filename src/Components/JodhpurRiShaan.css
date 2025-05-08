@@ -130,3 +130,45 @@
       width: 50px;
       fill: currentcolor;
   }
+
+
+  @media (max-width: 768px) {
+    .external {
+      height: 100vh;
+    }
+  
+    .external .horizontal-scroll-wrapper {
+      width: 100vh;
+      height: 140vw;
+    }
+  
+    .horizontal-scroll-wrapper img {
+      max-width: 38vh;
+      max-height: 42vh;
+    }
+  
+    .external .img-wrapper:hover {
+      min-height: 55vh;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .external {
+      height: 100vh;
+    }
+  
+    .external .horizontal-scroll-wrapper {
+      width: 100vh;
+      height: 180vw;
+    }
+  
+    .horizontal-scroll-wrapper img {
+      max-width: 32vh;
+      max-height: 36vh;
+    }
+  
+    .external .img-wrapper:hover {
+      min-height: 45vh;
+    }
+  }
+  
