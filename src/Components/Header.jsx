@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-removebg-preview.png";
 import flowerDesign from "../assets/untitled.png";
@@ -6,6 +6,7 @@ import flowerDesign from "../assets/untitled.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,20 +17,28 @@ const Header = () => {
     setIsServicesOpen(!isServicesOpen);
   };
 
-  return (
-    <header className="bg-[#edeecb] relative top-[-20px] ">
-      {/* Flower design positioned at the top center */}
-      {/* <div className="absolute top-[-5px] left-1/2 transform -translate-x-1/2 z-10">
-        <img
-          src={flowerDesign}
-          alt="Flower design"
-          width="100"
-          height="100"
-          className="transform rotate-190"
-        />
-      </div> */}
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
 
-      {/* Header content */}
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <header className="bg-[#edeecb] relative top-[-20px]">
       <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center px-6 pt-6 relative z-10">
         {/* Logo */}
         <div className="flex items-center">
@@ -48,7 +57,7 @@ const Header = () => {
           <Link to="/" className="text-primary hover:text-secondary">
             Home
           </Link>
-          <div className="relative">
+          <div className="relative" ref={servicesRef}>
             <button
               onClick={toggleServicesMenu}
               className="text-primary hover:text-secondary focus:outline-none"
@@ -60,30 +69,35 @@ const Header = () => {
                 <Link
                   to="/accommodation"
                   className="block px-4 py-2 hover:bg-[#693303]"
+                  onClick={handleLinkClick}
                 >
                   Accommodation
                 </Link>
                 <Link
                   to="/city-info"
                   className="block px-4 py-2 hover:bg-[#693303]"
+                  onClick={handleLinkClick}
                 >
                   City Info
                 </Link>
                 <Link
                   to="/tourist-places"
                   className="block px-4 py-2 hover:bg-[#693303]"
+                  onClick={handleLinkClick}
                 >
                   Tourist Places
                 </Link>
                 <Link
                   to="/foodpage"
                   className="block px-4 py-2 hover:bg-[#693303]"
+                  onClick={handleLinkClick}
                 >
                   Food & Restaurants
                 </Link>
                 <Link
                   to="/transport"
                   className="block px-4 py-2 hover:bg-[#693303]"
+                  onClick={handleLinkClick}
                 >
                   Transport
                 </Link>
@@ -116,12 +130,15 @@ const Header = () => {
         {isMenuOpen && (
           <div className="sm:hidden absolute top-[120px] right-0 w-full bg-[#edeecb] shadow-md rounded-lg z-30">
             <ul className="flex flex-col space-y-4 text-lg p-4">
-              <li>
-                <Link to="/" className="text-primary hover:text-secondary">
-                  Home
-                </Link>
-              </li>
-              <li>
+              <Link
+                to="/"
+                className="text-primary hover:text-secondary"
+                onClick={handleLinkClick}
+              >
+                Home
+              </Link>
+
+              <li ref={servicesRef}>
                 <button
                   onClick={toggleServicesMenu}
                   className="text-primary hover:text-secondary w-full text-left focus:outline-none"
@@ -132,7 +149,7 @@ const Header = () => {
                   <ul className="bg-white rounded-lg mt-2 p-2">
                     <li>
                       <Link
-                        to="/service1"
+                        to="/accomodation"
                         className="block hover:bg-[#693303] p-2 rounded"
                       >
                         Accommodation
@@ -166,20 +183,30 @@ const Header = () => {
                 )}
               </li>
               <li>
-                <Link to="/about" className="text-primary hover:text-secondary">
+                <Link
+                  to="/about"
+                  className="text-primary hover:text-secondary"
+                  onClick={handleLinkClick}
+                >
                   About Us
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/contact"
                   className="text-primary hover:text-secondary"
+                  onClick={handleLinkClick}
                 >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="text-primary hover:text-secondary">
+                <Link
+                  to="/login"
+                  className="text-primary hover:text-secondary
+                 onClick={handleLinkClick}"
+                >
                   Login
                 </Link>
               </li>
@@ -188,7 +215,7 @@ const Header = () => {
         )}
       </div>
 
-      {/* Left and Right Border with Center Gap */}
+      {/* Decorative border line */}
       <div className="absolute top-[110px] w-full flex justify-between">
         <div className="border-t-2 border-[#693303] w-[50%]"></div>
         <div className="border-t-2 border-[#693303] w-[50%]"></div>

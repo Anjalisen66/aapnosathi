@@ -91,7 +91,7 @@ const data = [
 
 const CityInfo = () => {
   return (
-    <div className="bg-[#f6e0a3] font-serif text-[#1a1a1a]">
+    <div className="bg-[#edeecb] font-serif text-[#1a1a1a]">
       {/* Top Border */}
       <div className="w-full h-12 bg-[url('/src/assets/Screenshot 2025-05-06 103126.png')] bg-repeat-x"></div>
 
@@ -122,7 +122,7 @@ const CityInfo = () => {
           />
         </div>
 
-        <div className="lg:w-1/2 bg-[#f3d8a6] p-6 rounded-xl shadow-md border-[3px] border-yellow-700">
+        <div className="lg:w-1/2 bg-[#edeecb] p-6 rounded-xl shadow-md border-[3px] border-yellow-700">
           <h2 className="text-3xl font-bold text-[#2f3b55] mb-2">JODHPUR</h2>
 
           <div className="border-l-4 border-yellow-700 pl-4 mb-4">
@@ -200,10 +200,10 @@ const CityInfo = () => {
       </div>
 
       {/* Local Food & Specialties */}
-      <div className="bg-[#f3d8a6] py-10 px-4 text-[#5b2e1d]">
+      <div className="bg-[#edeecb] py-10 px-4 text-[#5b2e1d]">
         <div className="max-w-4xl mx-auto border-4 border-[#5b2e1d] p-6 rounded-md shadow-lg bg-[#fefae0]">
           <h2 className="text-3xl font-bold text-center mb-6">
-            ᳈ Local Food & Specialties
+            Local Food & Specialties
           </h2>
 
           <div className="mb-8">
@@ -260,8 +260,8 @@ const CityInfo = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f3d8a6] min-h-screen font-serif px-6 py-10 text-[#4a2d0d]">
-        <div className="max-w-4xl mx-auto">
+      <div className="bg-[#edeecb] min-h-screen font-serif px-6 py-10 text-[#4a2d0d]">
+        <div className="max-w-4xl mx-auto text-justify text-wrap">
           <h1 className="text-4xl font-bold text-center mb-4">
             SHOPPING & HANDICRAFTS
           </h1>

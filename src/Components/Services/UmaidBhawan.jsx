@@ -22,7 +22,7 @@ const MehrangarhFort = () => {
   ];
 
   return (
-    <div className="relative bg-[#f5f2d0] p-4 md:p-10 font-serif overflow-hidden">
+    <div className="relative bg-[[#edeecb] p-4 md:p-10 font-serif overflow-hidden">
       <h1 className="text-4xl md:text-5xl font-bold text-[#652d0e] text-center mb-6">
         Mehrangarh Fort
       </h1>

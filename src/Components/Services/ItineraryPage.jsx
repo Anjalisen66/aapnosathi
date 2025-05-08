@@ -138,7 +138,7 @@ const ItineraryPage = () => {
   };
 
   return (
-    <div className="bg-[#f9f8dc] min-h-screen font-serif text-[#502b1d] transition-all duration-500 ease-in-out">
+    <div className="bg-[#edeecb] min-h-screen font-serif text-[#502b1d] transition-all duration-500 ease-in-out">
       {/* Header with background image transition */}
       <div
         className={`relative h-56 bg-cover bg-center transition-opacity duration-500 ease-in-out ${

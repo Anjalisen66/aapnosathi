@@ -129,7 +129,7 @@ const ExploreJodhpur = () => {
       </div>
 
       {/* Filter Section */}
-      <div className="bg-[#f5f0e1] py-16 px-4 sm:px-8 lg:px-16 relative mt-16">
+      <div className="bg-[#edeecb] py-16 px-4 sm:px-8 lg:px-16 relative mt-16">
         <h2 className="text-3xl sm:text-4xl text-orange-700 font-semibold mb-10 text-center">
           Refine Your Jodhpur Experience
         </h2>
@@ -203,7 +203,8 @@ const ExploreJodhpur = () => {
       </div>
 
       {/* Attractions Section */}
-      <div className="bg-[#f0f0d8] py-16 px-4 md:px-20">
+      {/* Attractions Section */}
+      <div className="bg-[#edeecb] py-16 px-4 md:px-20">
         <h1 className="text-3xl md:text-4xl text-center font-semibold text-orange-600 mb-10">
           Jodhpur’s Most Popular Attractions
         </h1>
@@ -211,17 +212,23 @@ const ExploreJodhpur = () => {
           {attractions.map((item, index) => (
             <div
               key={index}
-              className="relative rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
-              onClick={() => handleCardClick(item.path)}
+              className="relative rounded-xl overflow-hidden shadow-md transition-transform hover:scale-105"
             >
               <img
                 src={item.image}
                 alt={item.name}
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md">
-                <ArrowRight className="text-gray-700" />
+              <div
+                className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md cursor-pointer hover:bg-orange-500 transition duration-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCardClick(item.path);
+                }}
+              >
+                <ArrowRight className="text-gray-700 hover:text-white transition duration-300" />
               </div>
+
               <div className="absolute bottom-3 left-3 text-white text-lg font-bold drop-shadow-lg">
                 {item.name}
               </div>
@@ -233,7 +240,6 @@ const ExploreJodhpur = () => {
             View Itinerary
           </button>
         </Link>
-        {/* <ItineraryPage /> */}
       </div>
     </div>
   );
