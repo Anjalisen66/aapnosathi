@@ -82,6 +82,12 @@ const Header = () => {
                   Food & Restaurants
                 </Link>
                 <Link
+                  to="/TouristPlaces"
+                  className="block px-4 py-2 hover:bg-[#de5c0a]"
+                >
+                  Tourist Attractions
+                </Link>
+                <Link
                   to="/transport"
                   className="block px-4 py-2 hover:bg-[#693303]"
                 >
@@ -152,6 +158,14 @@ const Header = () => {
                         className="block hover:bg-[#693303] p-2 rounded"
                       >
                         Food & Restaurants
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/TouristPlaces"
+                        className="block hover:bg-[#de5c0a] p-2 rounded"
+                      >
+                       Tourist Attractions
                       </Link>
                     </li>
                     <li>

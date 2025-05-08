@@ -30,6 +30,26 @@ import FoodPage from "./Components/Services/FoodPage.jsx";
 import Transport from "./Components/Services/Transport.jsx";
 import CityInfo from "./Components/Services/CityInfo.jsx";
 import Accommodation from "./Components/Services/Accommodation.jsx";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Header from './Components/Header';
+import HeroSection from './Components/HeroSection';
+import Overview from './Components/Overview';
+import InfoSection from './Components/InfoSection';
+import Features from './Components/Features';
+// import JodhpurGallery from './Components/JodhpurGallery';
+import Footer from './Components/Footer';
+import Login from './Components/Login';
+import ContactUs from './Components/ContactUs';
+import TestimonialSlider from './Components/TestimonialSlider';
+import ReviewForm from './Components/ReviewForm';
+import AboutUs from './Components/AboutUs';
+import JodhpurRiShaan from './Components/JodhpurRiShaan';
+import Why from './Components/Why';
+import HexagonGrid from './Components/Hexagongrid';
+import SignUp from './Components/SignUp';
+import TouristPlaces from './Components/TouristPlaces';
+import LoginForm from './Components/LoginForm';
 
 function App() {
   return (
@@ -83,6 +103,7 @@ function MainContent() {
               {/* <JodhpurGallery /> */}
               <JodhpurRiShaan />
               <TestimonialSlider />
+              {/* <MonumentSlider /> */}
             </>
           }
         />
@@ -113,6 +134,14 @@ function MainContent() {
         <Route path="/transport" element={<Transport />} />
         <Route path="/city-info" element={<CityInfo />} />
         <Route path="/accommodation" element={<Accommodation />} />
+        {/* <Route path="/scrollComponent" element={<ScrollComponent />} /> */}
+        {/* <Route path="/tourism" element={<TouristAttraction />} /> */}
+        <Route path="/TouristPlaces" element={<TouristPlaces />} />
+        <Route path="/loginform" element={<LoginForm />} />
+       
+        
+
+
       </Routes>
 
       {/* Conditionally render Footer on home and about routes */}
