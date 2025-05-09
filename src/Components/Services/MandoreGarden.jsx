@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import fortImage from "../../assets/mehrangarh-fort-jodhpur.jpg";
 import { FaSmile, FaMeh, FaFrown, FaAngry, FaGrinStars } from "react-icons/fa";
 
-const MehrangarhFort = () => {
+const MandoreGarden = () => {
   const [selectedRating, setSelectedRating] = useState(null);
 
   const ratingIcons = [
@@ -21,33 +20,40 @@ const MehrangarhFort = () => {
     "bg-green-500",
   ];
 
+  // Array of 5 different image URLs
+  const smallImages = [
+    "/mg1.jpg",
+    "/mg2.jpg",
+    "/mg3.jpg",
+    "/mg49.jpg",
+    "/mg5.jpg",
+  ];
+
   return (
     <div className="relative bg-[#edeecb] p-4 md:p-10 font-serif overflow-hidden">
       <h1 className="text-4xl md:text-5xl font-bold text-[#652d0e] text-center mb-6">
-        Mehrangarh Fort
+        Mandore Garden
       </h1>
 
       <div className="grid md:grid-cols-2 gap-8 relative">
         {/* Left Column */}
         <div>
           <img
-            src="https://images.unsplash.com/photo-1566873535350-a3f5d4a804b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="/mg.jpg"
             alt="Mehrangarh Fort"
             className="w-full h-[300px] object-cover rounded-xl"
           />
 
           {/* Small Images */}
           <div className="flex justify-between mt-4 gap-2">
-            {Array(5)
-              .fill()
-              .map((_, i) => (
-                <img
-                  key={i}
-                  src="https://images.unsplash.com/photo-1642528928091-eb8451e950f3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Mehrangarh Fort"
-                  className="w-1/5 h-20 object-cover rounded-md"
-                />
-              ))}
+            {smallImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Mehrangarh Fort ${index + 1}`}
+                className="w-1/5 h-20 object-cover rounded-md"
+              />
+            ))}
           </div>
 
           {/* Ratings */}
@@ -95,13 +101,6 @@ const MehrangarhFort = () => {
 
         {/* Right Column with Soft Fade Background & Aligned Boxes */}
         <div className="relative flex flex-col justify-between z-10 h-full">
-          {/* Soft faded background */}
-          {/* <img
-            src={fortImage}
-            alt="Background"
-            className="absolute top-20 right-0 w-50 h-50 object-cover opacity-50 z-0 rounded-xl"
-          /> */}
-
           <div className="space-y-4 relative z-10 h-full flex flex-col justify-between">
             {/* Box 1 - Top aligned */}
             <h3 className="text-lg font-semibold bg-orange-300 px-3 py-1 inline-block rounded-t-md">
@@ -110,16 +109,17 @@ const MehrangarhFort = () => {
             <div className="border border-black  p-3 md:p-4 rounded-md shadow bg-transparent text-sm">
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>
-                  <strong>Location:</strong> Jodhpur, Rajasthan, India
+                  <strong>Location:</strong>Jodhpur, Rajasthan, India
                 </li>
                 <li>
-                  <strong>Description:</strong> One of the largest forts in
-                  India, Mehrangarh Fort stands majestically on a rocky hill,
-                  offering panoramic views of Jodhpur.
+                  <strong>Description:</strong> A historical garden with
+                  temples, cenotaphs, and impressive architecture, Mandore
+                  Garden is a tranquil space, once the site of the Marwar kings'
+                  royal cenotaphs.
                 </li>
                 <li>
-                  Built in the 15th century by Rao Jodha, showcasing grand
-                  architecture and museums.
+                  Dates back to the 6th century, with later additions by the
+                  Marwar rulers.
                 </li>
                 <li>
                   <strong>Best Time:</strong> October to March
@@ -134,18 +134,18 @@ const MehrangarhFort = () => {
             <div className="border border-black p-3 md:p-4 rounded-md shadow bg-transparent text-sm">
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>
-                  <strong>Location:</strong> Mehrangarh Fort, Jodhpur
+                  <strong>Location:</strong> Mandore Garden, Jodhpur
                 </li>
                 <li>
-                  <strong>Nearest Airport:</strong> Jodhpur Airport (9 km)
+                  <strong>Nearest Airport:</strong> Jodhpur Airport (8 km)
                 </li>
-                <li>Railway Station: Jodhpur Junction (6 km)</li>
-                <li>Bus Stop: Ratan Bagh Bus Stand (6 km)</li>
+                <li>Railway Station: Jodhpur Junction (9 km)</li>
+                <li>Bus Stop: Mandore Road Bus Stand (1.5 km)</li>
                 <li>
                   <strong>Transport:</strong> Autos, taxis, rental cars, buses
                 </li>
                 <li>
-                  <strong>Wheelchair Access:</strong> Ramps & elevator available
+                  <strong>Wheelchair Access:</strong> Limited
                 </li>
               </ul>
             </div>
@@ -158,25 +158,26 @@ const MehrangarhFort = () => {
             <div className="border border-black p-3 md:p-4 rounded-md shadow bg-transparent text-sm">
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>
-                  <strong>Nearby:</strong> Jaswant Thada, Clock Tower, Umaid
-                  Bhawan Palace
+                  <strong>Nearby:</strong> Mehrangarh Fort, Jaswant Thada, Clock
+                  Tower
                 </li>
                 <li>
-                  <strong>Culture:</strong> Rajasthani music & Kalbeliya dance
+                  <strong>Temples:</strong> Jain Temple, Hall of Heroes
                 </li>
                 <li>
-                  <strong>Festivals:</strong> Marwar Festival
+                  <strong>Cenotaphs: </strong> Royal cenotaphs of Marwar rulers
                 </li>
                 <li>
-                  <strong>Food:</strong> Makhaniya Lassi, Local Maas, Methi
-                  Bhaji
+                  <strong>Architecture:</strong> Intricate carvings and ancient
+                  ruins
                 </li>
                 <li>
-                  <strong>Adventure:</strong> Zip Lining, Desert Safari
+                  <strong>Botanical Gardens:</strong> Lush greenery and peaceful
+                  surroundings
                 </li>
                 <li>
-                  <strong>Blue City Walk:</strong> Explore blue-painted old city
-                  houses
+                  <strong>Photography: </strong> Beautiful gardens and
+                  historical monuments ideal for photography
                 </li>
               </ul>
             </div>
@@ -187,4 +188,4 @@ const MehrangarhFort = () => {
   );
 };
 
-export default MehrangarhFort;
+export default MandoreGarden;

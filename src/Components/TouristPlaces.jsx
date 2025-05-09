@@ -4,9 +4,6 @@ import desert from "../assets/image1.jpg";
 import filterDecor from "../assets/image2.jpg";
 import collage from "../assets/image.png";
 import { ArrowRight } from "lucide-react";
-import mehrangarhImg from "../assets/WhatsApp Image 2025-04-08 at 16.03.34_9347f31b.jpg";
-import umaidImg from "../assets/WhatsApp Image 2025-04-08 at 16.03.34_5ac2d816.jpg";
-import mandoreImg from "../assets/umaid-bhawan.jpg";
 import { Link } from "react-router-dom";
 
 const ExploreJodhpur = () => {
@@ -26,18 +23,18 @@ const ExploreJodhpur = () => {
   const attractions = [
     {
       name: "Mehrangarh Fort",
-      image: mehrangarhImg,
-      path: "mehrangarh-fort",
+      image: "/mehrangarhImg.jpg",
+      path: "/mehrangarhImg.jpg",
     },
     {
       name: "Mandore Gardens",
-      image: mandoreImg,
-      path: "mandore-gardens",
+      image: "/mandore-gardens.jpg",
+      path: "/mandore-gardens.jpg",
     },
     {
       name: "Umaid Bhawan Palace",
-      image: umaidImg,
-      path: "UmaidBhawan",
+      image: "/UmaidBhawan.jpg",
+      path: "/UmaidBhawan.jpg",
     },
   ];
 
