@@ -1,16 +1,12 @@
-import React from 'react';
-import './AboutUs.css';
-import aboutImage from '../assets/about-us.png';
-import storyBackground from '../assets/52a4551243da81dc44725106b5666d9f.jpg';
-import studentIcon from '../assets/student.png';
-import communityIcon from '../assets/community.png';
-import verifiedIcon from '../assets/verified.png';
-import aiIcon from '../assets/ai.png';
-import teamMember1 from '../assets/bhumika.jpg'; 
-import teamMember2 from '../assets/passportSizeImg.jpg';
-import teamMember3 from '../assets/Juhi.jpg';
-import Why from "./Why"
-
+import React from "react";
+import "./AboutUs.css";
+import aboutImage from "../assets/about-us.png";
+import storyBackground from "../assets/52a4551243da81dc44725106b5666d9f.jpg";
+import studentIcon from "../assets/student.png";
+import communityIcon from "../assets/community.png";
+import verifiedIcon from "../assets/verified.png";
+import aiIcon from "../assets/ai.png";
+import Why from "./Why";
 
 const AboutUs = () => {
   return (
@@ -20,9 +16,9 @@ const AboutUs = () => {
         className="relative h-[50vh] lg:h-[60vh] flex items-center justify-center text-center"
         style={{
           backgroundImage: `url(${aboutImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1 className="text-[#edeecb] text-4xl lg:text-6xl font-bold  px-6 py-2 rounded-md">
@@ -57,64 +53,79 @@ const AboutUs = () => {
           </h1>
           <div className="about-us-content">
             <p>
-              The idea for this platform was born from a shared experience—navigating the challenges of adjusting to a new city as students. Our team, hailing from different backgrounds, vividly remembers the overwhelming process of finding a place to stay, figuring out the city's transportation system, and locating reliable local services.
+              The idea for this platform was born from a shared
+              experience—navigating the challenges of adjusting to a new city as
+              students. Our team, hailing from different backgrounds, vividly
+              remembers the overwhelming process of finding a place to stay,
+              figuring out the city's transportation system, and locating
+              reliable local services.
             </p>
             <p>
-              While some of us spent weeks hunting for affordable accommodations that were both safe and close to our campuses, others struggled with long commutes, missed buses, or confusing transit systems. Add to that the frustration of finding essential services like affordable eateries, laundry, and repair shops, and it became clear: students need a better solution.
+              While some of us spent weeks hunting for affordable accommodations
+              that were both safe and close to our campuses, others struggled
+              with long commutes, missed buses, or confusing transit systems.
+              Add to that the frustration of finding essential services like
+              affordable eateries, laundry, and repair shops, and it became
+              clear: students need a better solution.
             </p>
             <p>
-              We realized that while cities offer endless opportunities, they often lack centralized resources tailored to students' needs. This gap inspired us to create a platform that simplifies the transition for students moving to a new city.
+              We realized that while cities offer endless opportunities, they
+              often lack centralized resources tailored to students' needs. This
+              gap inspired us to create a platform that simplifies the
+              transition for students moving to a new city.
             </p>
           </div>
         </div>
       </div>
-     
-     <Why />
 
-    <div className="team-container">
-      <h2 className="team-title">Our Team</h2>
-      <p className="team-description">
-        "Meet our dedicated team of innovators! Anjali drives database and UI/UX design, Bhumika excels in frontend development and data gathering, and Juhi powers our project with machine learning expertise. Together, we're crafting solutions that make an impact!"
-      </p>
+      <Why />
 
-      <div className="team-grid">
-        {/* Team Member 1 */}
-        <div className="team-member">
-          <div className="team-photo">
-            <img src={teamMember2} alt="Team Member 1" />
-          </div>
-          <div className="team-info">
-            <p className="team-name">Anjali Sen</p>
-            <p className="team-designation">UI/UX Designer</p>
-          </div>
-        </div>
+      <div className="team-container">
+        <h2 className="team-title">Our Team</h2>
+        <p className="team-description">
+          "Meet our dedicated team of innovators! Anjali drives database and
+          UI/UX design, Bhumika excels in frontend development and data
+          gathering, and Juhi powers our project with machine learning
+          expertise. Together, we're crafting solutions that make an impact!"
+        </p>
 
-        {/* Team Member 2 */}
-        <div className="team-member">
-          <div className="team-photo">
-            <img src={teamMember1} alt="Team Member 2" />
+        <div className="team-grid">
+          {/* Team Member 1 */}
+          <div className="team-member">
+            <div className="team-photo">
+              <img src="anjali.jpg" alt="Team Member 1" />
+            </div>
+            <div className="team-info">
+              <p className="team-name">Anjali Sen</p>
+              <p className="team-designation">UI/UX Designer</p>
+            </div>
           </div>
-          <div className="team-info">
-            <p className="team-name">Bhumika Chaturvedi</p>
-            <p className="team-designation">Frontend Developer</p>
-          </div>
-        </div>
 
-        {/* Team Member 3 */}
-        <div className="team-member">
-          <div className="team-photo">
-            <img src={teamMember3} alt="Team Member 3" />
+          {/* Team Member 2 */}
+          <div className="team-member">
+            <div className="team-photo">
+              <img src="bhumika.jpg" alt="Team Member 2" />
+            </div>
+            <div className="team-info">
+              <p className="team-name">Bhumika Chaturvedi</p>
+              <p className="team-designation">Frontend Developer</p>
+            </div>
           </div>
-          <div className="team-info">
-            <p className="team-name">Juhi Harsh</p>
-            <p className="team-designation">Backend Developer</p>
+
+          {/* Team Member 3 */}
+          <div className="team-member">
+            <div className="team-photo">
+              <img src="juhi.jpg" alt="Team Member 3" />
+            </div>
+            <div className="team-info">
+              <p className="team-name">Juhi Harsh</p>
+              <p className="team-designation">Backend Developer</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };
-
 
 export default AboutUs;

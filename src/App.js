@@ -85,7 +85,7 @@ function MainContent() {
   const isHomeOrAbout = showHeaderFooterRoutes.includes(location.pathname);
 
   return (
-    <div className="bg-[#f3d8a6] min-h-screen overflow-x-hidden">
+    <div className="bg-[#edeecb] min-h-screen overflow-x-hidden">
       {/* Conditionally render Header and Footer on home and about routes */}
       {isHomeOrAbout && <Header />}
 

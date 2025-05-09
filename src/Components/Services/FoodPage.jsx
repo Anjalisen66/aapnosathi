@@ -5,34 +5,34 @@ const FoodPage = () => {
   const restaurants = [
     {
       name: "INDIGO RESTAURANT",
-      type: "Veg",
+      type: "Vegetarian",
       area: "Indian, Grill",
       location:
-        "Roof Top Gouri Haveli Near Clock Tower Rd, Jodhpur 342001 India",
-      rating: "4.2",
+        "72XC+2PP, Roof Top Gouri Haveli, Laykan Mohalla, Gulab Sagar, Jodhpur, Rajasthan 342001",
+      rating: "4.8",
       img: "wonderful-view-from-roof.jpg",
     },
     {
       name: "Sholla",
-      type: "Veg - Non-Vegetarian",
+      type: "Vegetarian",
       area: "Indian, Grill",
       location:
         "53, Uchiyarda Road Near Euro International School, Welcomhotel By Itc Hotels, Jodhpur 342027 India",
-      rating: "4.5",
+      rating: "4.9",
       img: "the-word-sholla-is-derived.jpg",
     },
     {
       name: "The Recipe Restaurant",
-      type: "Veg",
+      type: "Vegetarian",
       area: "Chinese, Indian",
       location:
         "58 Residency Road opposite S N medical college near Goyal hospital, Jodhpur 342003 India",
-      rating: "4.4",
+      rating: "4.9",
       img: "the-recipe-best-vegetarian.jpg",
     },
     {
       name: "Dev Kothi Roof Top Restaurant",
-      type: "Veg",
+      type: "Vegetarian",
       area: "Indian, Asian",
       location:
         "Killi Khana, Near Shiv Mandir at Dev Kothi Boutique Heritage Home Stay, Jodhpur 342002 India",
@@ -41,7 +41,7 @@ const FoodPage = () => {
     },
     {
       name: "Indique Restaurant & Bar",
-      type: "Non-Vegetarian",
+      type: "Vegetarian",
       area: "Indian, Asian",
       location:
         "Hotel Pal Haveli Near Clock Tower, Gulab Sagar, Jodhpur 342001 India",
@@ -50,7 +50,7 @@ const FoodPage = () => {
     },
     {
       name: "Cafe Laalten",
-      type: "Non-Vegetarian",
+      type: "Vegetarian",
       area: "Chinese, Indian",
       location:
         "Inside Pol, Opp Balaji Temple, Near Sadar Haveli, Jodhpur 342001 India",
@@ -124,22 +124,42 @@ const FoodPage = () => {
             {
               img: "दाल_बाटी_चूरमा-removebg-preview.png",
               name: <p className="text-[#de5c0a]">Dal Baati Churma</p>,
-              desc: <p className="text-[#793319]">Dal Bati Churma is probably the most common dish in the Marwar area of Rajasthan. Tasted in several places.</p>,
+              desc: (
+                <p className="text-[#793319]">
+                  Dal Bati Churma is probably the most common dish in the Marwar
+                  area of Rajasthan. Tasted in several places.
+                </p>
+              ),
             },
             {
               img: "mirchi_bada-removebg-preview.png",
               name: <p className="text-[#de5c0a]">Mirchi Bada</p>,
-              desc: <p className="text-[#793319]">Mirchi Vada, a deep fried pastry stuffed with green chilly and cauliflower. Special aroma!</p>,
+              desc: (
+                <p className="text-[#793319]">
+                  Mirchi Vada, a deep fried pastry stuffed with green chilly and
+                  cauliflower. Special aroma!
+                </p>
+              ),
             },
             {
               img: "mawa_kachori-removebg-preview.png",
               name: <p className="text-[#de5c0a]">Mawa Kachori</p>,
-              desc: <p className="text-[#793319]">A sweet kachori stuffed with mawa and dry fruits, deep-fried and dipped in sugar syrup.</p>,
+              desc: (
+                <p className="text-[#793319]">
+                  A sweet kachori stuffed with mawa and dry fruits, deep-fried
+                  and dipped in sugar syrup.
+                </p>
+              ),
             },
             {
               img: "Pyaaz-Kachori-1-removebg-preview.png",
               name: <p className="text-[#de5c0a]">Pyaaz Kachori</p>,
-              desc: <p className="text-[#793319]">A spicy onion-stuffed flaky deep-fried pastry. Best enjoyed with chutney.</p>,
+              desc: (
+                <p className="text-[#793319]">
+                  A spicy onion-stuffed flaky deep-fried pastry. Best enjoyed
+                  with chutney.
+                </p>
+              ),
             },
           ].map((dish, idx) => (
             <div key={idx} className="flex items-start gap-4">
@@ -165,23 +185,27 @@ const RecommendedPlaces = () => {
   const places = [
     {
       name: "Shri Mishrilal Hotel",
-      type: "Famous for Makhaniya Lassi near Clock Tower.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRioT4u7WcWvBMann2l7t5oMBFzttUOvCVKGw&s",
+      type: "Shri Mishrilal Hotel, established in 1927, is a historic eatery located near the Clock Tower in Jodhpur, Rajasthan. Renowned for its signature Makhaniya Lassi, a rich and creamy yogurt-based drink, the establishment has become a must-visit spot for both locals and tourists seeking authentic Rajasthani flavors.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRioT4u7WcWvBMann2l7t5oMBFzttUOvCVKGw&s",
     },
     {
       name: "Janta Sweet Home",
-      type: "For Mirchi Bada, Pyaaz Kachori, sweets.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNYFUs2g9j2ibUHdhWC2AsbdRgn73KaA6iA&s",
+      type: "Janta Sweet Home is a popular local sweets shop known for its delicious traditional Indian sweets and snacks. It offers a wide range of treats, from crispy snacks to mouth-watering desserts, loved by locals and visitors alike.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNYFUs2g9j2ibUHdhWC2AsbdRgn73KaA6iA&s",
     },
     {
       name: "Gypsy Dining Hall",
-      type: "For authentic Rajasthani thali experience.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-2RFxqQK8KBL2GLOWg9S8y-jxdNypqoMjQ&s",
+      type: "Gypsy Dining Hall in Sardarpura, Jodhpur, is a renowned vegetarian restaurant celebrated for its authentic Rajasthani thali, offering a wide array of traditional dishes at an affordable price point of approximately ₹800 for two people.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-2RFxqQK8KBL2GLOWg9S8y-jxdNypqoMjQ&s",
     },
     {
       name: "On The Rocks",
-      type: "Popular restaurant with a garden setting.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KnW6CEIUjLuj-Wmwv8pqCluzvKSxnxcBKA&s",
+      type: "On The Rocks refers to a drink, typically a cocktail, served over ice cubes. It can also symbolize a situation or relationship facing difficulties or challenges.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KnW6CEIUjLuj-Wmwv8pqCluzvKSxnxcBKA&s",
     },
   ];
 
@@ -195,7 +219,7 @@ const RecommendedPlaces = () => {
         {places.map((place, index) => (
           <div
             key={index}
-            className="bg-[#f7f0e5] rounded-2xl shadow-md overflow-hidden border p-4"
+            className="bg-[#f7f0e5] rounded-2xl shadow-md overflow-hidden border p-4 text-justify text-wrap"
           >
             <img
               src={place.image}

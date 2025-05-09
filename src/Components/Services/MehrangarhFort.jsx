@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import fortImage from "../../assets/mehrangarh-fort-jodhpur.jpg";
 import { FaSmile, FaMeh, FaFrown, FaAngry, FaGrinStars } from "react-icons/fa";
 
 const MehrangarhFort = () => {
@@ -21,8 +20,17 @@ const MehrangarhFort = () => {
     "bg-green-500",
   ];
 
+  // Array of 5 different image URLs
+  const smallImages = [
+    "/m1.jpeg",
+    "/m2.avif",
+    "/m3.avif",
+    "/m4.avif",
+    "/m5.avif",
+  ];
+
   return (
-    <div className="relative bg-[#f5f2d0] p-4 md:p-10 font-serif overflow-hidden">
+    <div className="relative bg-[#edeecb] p-4 md:p-10 font-serif overflow-hidden">
       <h1 className="text-4xl md:text-5xl font-bold text-[#652d0e] text-center mb-6">
         Mehrangarh Fort
       </h1>
@@ -38,16 +46,14 @@ const MehrangarhFort = () => {
 
           {/* Small Images */}
           <div className="flex justify-between mt-4 gap-2">
-            {Array(5)
-              .fill()
-              .map((_, i) => (
-                <img
-                  key={i}
-                  src="https://images.unsplash.com/photo-1642528928091-eb8451e950f3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Mehrangarh Fort"
-                  className="w-1/5 h-20 object-cover rounded-md"
-                />
-              ))}
+            {smallImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Mehrangarh Fort ${index + 1}`}
+                className="w-1/5 h-20 object-cover rounded-md"
+              />
+            ))}
           </div>
 
           {/* Ratings */}
@@ -95,13 +101,6 @@ const MehrangarhFort = () => {
 
         {/* Right Column with Soft Fade Background & Aligned Boxes */}
         <div className="relative flex flex-col justify-between z-10 h-full">
-          {/* Soft faded background */}
-          {/* <img
-            src={fortImage}
-            alt="Background"
-            className="absolute top-20 right-0 w-50 h-50 object-cover opacity-50 z-0 rounded-xl"
-          /> */}
-
           <div className="space-y-4 relative z-10 h-full flex flex-col justify-between">
             {/* Box 1 - Top aligned */}
             <h3 className="text-lg font-semibold bg-orange-300 px-3 py-1 inline-block rounded-t-md">

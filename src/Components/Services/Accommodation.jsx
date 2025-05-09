@@ -140,7 +140,7 @@ const Accommodation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5d6a4] font-serif text-[#693303] border-[10px] border-[#c89e6e] px-6 py-10 relative">
+    <div className="min-h-screen bg-[#edeecb] font-serif text-[#693303] border-[10px] border-[#c89e6e] px-6 py-10 relative">
       {/* Decorative Corners */}
       {[
         "top-0 left-0",
@@ -159,7 +159,7 @@ const Accommodation = () => {
       <img
         src="/jodh.jpeg"
         alt="Banner"
-        className="w-full h-64 object-cover border border-[#c89e6e]"
+        className="w-full h-64 object-cover border border-[#edeecb]"
       />
 
       {/* Heading */}
@@ -173,7 +173,7 @@ const Accommodation = () => {
 
       {/* Filters */}
       <div className="flex flex-wrap justify-center gap-4 mt-6">
-        <select className="px-4 py-2 border border-[#c89e6e] rounded bg-[#f9e8d2]">
+        <select className="px-4 py-2 border border-[#652d0e] rounded bg-[#f9e8d2]">
           <option>Budget</option>
           <option>₹ Min</option>
           <option>₹ 4000</option>
@@ -184,20 +184,20 @@ const Accommodation = () => {
           <option>₹ 15000</option>
           <option>₹ 20000</option>
         </select>
-        <select className="px-4 py-2 border border-[#c89e6e] rounded bg-[#f9e8d2]">
+        <select className="px-4 py-2 border border-[#652d0e] rounded bg-[#f9e8d2]">
           <option>Occupancy</option>
           <option>Single</option>
           <option>Double</option>
           <option>Triple</option>
           <option>Others</option>
         </select>
-        <select className="px-4 py-2 border border-[#c89e6e] rounded bg-[#f9e8d2]">
+        <select className="px-4 py-2 border border-[#652d0e] rounded bg-[#f9e8d2]">
           <option>Boys/Girls</option>
           <option>Boys</option>
           <option>Girls</option>
           <option>Both</option>
         </select>
-        <button className="px-5 py-2 bg-[#c89e6e] text-white rounded hover:bg-[#b98a5d]">
+        <button className="px-5 py-2 bg-[#652d0e] text-white rounded hover:bg-[#b98a5d]">
           Filter
         </button>
       </div>
@@ -207,7 +207,7 @@ const Accommodation = () => {
         {accommodations.map((pg, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-md shadow-md overflow-hidden border border-[#c89e6e]"
+            className="bg-white rounded-md shadow-md overflow-hidden border border-[#652d0e]"
           >
             <div className="relative">
               <img
@@ -226,7 +226,7 @@ const Accommodation = () => {
             <div className="p-4 space-y-2">
               <div className="flex justify-between items-center">
                 <h2 className="text-xl font-bold">{pg.name}</h2>
-                <p className="text-sm bg-[#f5d6a4] px-2 py-1 rounded border border-[#c89e6e]">
+                <p className="text-sm text-[#f9e8d2] bg-[#652d0e] px-2 py-1 rounded border border-[#652d0e]">
                   {pg.price}
                 </p>
               </div>
@@ -269,14 +269,14 @@ const Accommodation = () => {
               <div className="flex flex-wrap gap-2 mt-4">
                 <button
                   onClick={() => openPhoneModal(pg.phone)}
-                  className="flex-1 text-sm border border-[#c89e6e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]"
+                  className="flex-1 text-sm border border-[#652d0e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]"
                 >
                   <FaPhone className="inline mr-1" /> View Phone No.
                 </button>
-                <button className="flex-1 text-sm border border-[#c89e6e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]">
+                <button className="flex-1 text-sm border border-[#652d0e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]">
                   Contact Owner
                 </button>
-                <button className="flex-1 text-sm border border-[#c89e6e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]">
+                <button className="flex-1 text-sm border border-[#652d0e] text-[#693303] py-1 rounded hover:bg-[#f5d6a4]">
                   <FaMap className="inline mr-1" /> View on Map
                 </button>
               </div>

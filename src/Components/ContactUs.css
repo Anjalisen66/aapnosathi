@@ -1,7 +1,7 @@
 .contact-us-container {
   background-color: #edeecb;
   padding: 0px;
-  font-family: 'Garamond', serif;
+  font-family: "Garamond", serif;
 }
 
 /* Hero Section */
@@ -99,6 +99,16 @@
   border-radius: 10px;
   cursor: pointer;
 }
+.submit-btn:hover {
+  background-color: #f47d32;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.submit-btn.sent {
+  background-color: #663300;
+  cursor: default;
+}
 
 /* Contact Details */
 .contact-details {
@@ -125,11 +135,28 @@
   margin-top: 20px;
 }
 
-.contact-box {
+/* .contact-box {
   background-color: #8d5c2f;
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 10px;
+} */
+
+.contact-box {
+  background-color: #8d5c2f;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.contact-box:hover {
+  background-color: #edeecb; /* light blue on hover */
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .custom-divider {
@@ -244,11 +271,56 @@
     font-size: 24px;
   }
 
+  .scrollable-faq {
+    max-height: 240px; /* Adjust depending on how tall each FAQ is */
+    overflow-y: auto;
+    padding-right: 10px; /* space for scrollbar */
+  }
+
+  /* Optional: Style the scrollbar (for Webkit-based browsers) */
+  .scrollable-faq {
+    scrollbar-gutter: stable; /* Keeps space for scrollbar even when not needed */
+  }
+
+  .scrollable-faq::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollable-faq::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .scrollable-faq::-webkit-scrollbar-thumb {
+    background: #793319;
+    border-radius: 4px;
+  }
+
+  .scrollable-faq::-webkit-scrollbar-thumb:hover {
+    background: #793319;
+  }
+
   .contact-box {
     font-size: 14px;
   }
 
   .form-container {
     padding: 15px;
+  }
+}
+
+.thank-you-msg {
+  margin-top: 10px;
+  color: #793319;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -6,7 +6,7 @@ import logo from "../assets/logo-removebg-preview.png";
 const Footer = () => {
   return (
     <div
-      className="bg-[#f3d8a6] text-[#7a3b1c] p-8 md:p-12"
+      className="bg-[#edeecb] text-[#7a3b1c] p-8 md:p-12"
       style={{ fontFamily: "Garamond, serif", position: "relative" }}
     >
       <div className="border-t-4 border-[#814b19] absolute left-0 right-0 top-0 mb-8"></div>
