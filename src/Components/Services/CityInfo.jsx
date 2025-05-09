@@ -3,26 +3,52 @@ import React from "react";
 const places = [
   {
     title: "Mehrangarh Fort",
-    description:
-      "A massive hilltop fort offering panoramic views of Jodhpur and a museum showcasing royal artifacts.",
+    description: (
+      <p>
+        Mehrangarh Fort, located in Jodhpur, Rajasthan, is one of India's
+        largest and most majestic forts, built in 1459 by Rao Jodha. Perched
+        atop a rocky hill, it offers panoramic views of the Blue City and houses
+        a museum showcasing royal artifacts.
+      </p>
+    ),
     image: "Mehrangarh Fort.jpg",
   },
   {
     title: "Umaid Bhavan Palace",
-    description:
-      "A luxurious palace and hotel, known for its stunning Indo-Colonial architecture and museum.",
+    description: (
+      <p>
+        Umaid Bhavan Palace in Jodhpur is one of the world's largest private
+        residences, built between 1928 and 1943. It blends Indian and European
+        architectural styles and now serves as a luxury hotel, museum, and royal
+        residence.{" "}
+      </p>
+    ),
     image: "Umaid Bhavan Palace.jpg",
   },
   {
     title: "Jaswant Thada",
-    description:
-      "A beautiful marble cenotaph built in memory of Maharaja Jaswant Singh II, surrounded by gardens.",
+    description: (
+      <p>
+        Jaswant Thada is a stunning white marble cenotaph built in 1899 in
+        Jodhpur, Rajasthan, in memory of Maharaja Jaswant Singh II. Often called
+        the "Taj Mahal of Marwar," it features intricate carvings and peaceful
+        gardens overlooking the Mehrangarh Fort.
+      </p>
+    ),
     image: "Jaswant Thada.jpg",
   },
   {
     title: "Mandore Gardens",
-    description:
-      "The historic gardens home to temples, memorials, and stupas, reflecting Jodhpur’s rich heritage.",
+    description: (
+      <p>
+        Mandore Gardens, situated approximately 9 kilometers north of Jodhpur,
+        Rajasthan, is a historic site that once served as the capital of the
+        Marwar kingdom before the establishment of Jodhpur city. The gardens are
+        renowned for their collection of royal cenotaphs (chhatris), temples,
+        and the Hall of Heroes, which features 16 figures carved from a single
+        rock, commemorating the region's folk heroes .
+      </p>
+    ),
     image: "Mandore Gardens.jpg",
   },
 ];
@@ -175,15 +201,15 @@ const CityInfo = () => {
 
       {/* Must-Visit Places */}
       <div className="px-4 md:px-16 py-10 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#693303] mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#693303]  mb-8">
           Must-Visit Places in Jodhpur
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto ">
           {places.map((place, index) => (
             <div
               key={index}
-              className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-4 shadow-md text-left"
+              className="bg-yellow-50 border-2 border-[#693303] rounded-xl p-4 shadow-md  text-wrap text-justify"
             >
               <img
                 src={place.image}
@@ -208,27 +234,27 @@ const CityInfo = () => {
 
           <div className="mb-8">
             <h3 className="text-xl font-bold mb-4">Must-Try Dishes:</h3>
-            <div className="space-y-6">
+            <div className="space-y-6  text-wrap text-justify">
               {[
                 {
                   img: "/dal-baati.jpg",
                   title: "Dal Baati Churma",
-                  desc: "Hard-based sweet-based heart-based dish Jodhpur",
+                  desc: "Dal Baati Churma is a traditional Rajasthani dish featuring spicy lentils (dal), baked wheat balls (baati),and sweet crushed wheat dessert (churma).",
                 },
                 {
                   img: "/mirchi-bada.jpg",
                   title: "Mirchi Bada & Pyaaz Kachori",
-                  desc: "Stuffed dish, street-fried Khek & Pyaaz Kachori",
+                  desc: "Mirchi Bada and Pyaaz Kachori are iconic spicy snacks from Rajasthan, loved for their crispiness and bold, flavorful fillings.",
                 },
                 {
                   img: "/makhaniya-lassi.jpg",
                   title: "Makhaniya Lassi",
-                  desc: "Thick yogurt-based drink",
+                  desc: "Makhaniya Lassi is a rich, creamy yogurt-based drink from Rajasthan, famously topped with a thick layer of malai (cream) and flavored with saffron and cardamom.",
                 },
                 {
                   img: "/gulab-jamun.webp",
                   title: "Gulab Jamun Ki Sabzi",
-                  desc: "Kilbu-jamun Ki Sabzi",
+                  desc: "Gulab Jamun Ki Sabzi is a unique Rajasthani dish where sweet gulab jamuns are cooked in a spicy, savory gravy.",
                 },
               ].map((food, i) => (
                 <div key={i} className="flex items-center space-x-4">
